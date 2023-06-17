@@ -20,6 +20,9 @@ Custom functions
 
 #]=======================================================================]
 
+# This module requires CMake 3.20 because it uses cmake_path
+cmake_minimum_required(VERSION 3.20.0)
+
 # Function that sets the __REL_FILE__ definition for a particular source file
 function(source_add_relative_file_macro SRC_FILE)
     # Normalize
