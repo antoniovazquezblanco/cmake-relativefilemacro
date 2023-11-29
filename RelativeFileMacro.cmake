@@ -30,7 +30,7 @@ function(source_add_relative_file_macro SRC_FILE)
     # Get relative path
     cmake_path(RELATIVE_PATH SRC_FILE_ABSOLUTE BASE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} OUTPUT_VARIABLE SRC_FILE_REL)
     # Set a __FILE__ property for the current source file
-    set_property(SOURCE ${SRC_FILE} APPEND PROPERTY COMPILE_DEFINITIONS __REL_FILE__="\"${SRC_FILE_REL}\"")
+    set_property(SOURCE ${SRC_FILE} APPEND PROPERTY COMPILE_DEFINITIONS __REL_FILE__=${SRC_FILE_REL})
 endfunction()
 
 # Function that sets the __REL_FILE__ definition in all files of a particular target
